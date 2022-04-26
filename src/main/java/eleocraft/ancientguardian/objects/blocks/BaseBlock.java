@@ -45,9 +45,14 @@ public class BaseBlock extends Block
 	 @Override
 	 public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
 	 {
-		 if (player.inventory.getCurrentItem().getItem() == ForgeRegistries.ITEMS.getValue(new ResourceLocation("ancientguardian:ancient_crystal")) && !state.get(ACTIVE_PORT))
+		 if (state.get(ACTIVE_PORT))
 		 {
-			 System.out.println("It worked");
+			 player.inventory.addItemStackToInventory(ForgeRegistries.ITEMS.getValue(new ResourceLocation("ancientguardian:ancient_crystal")).getDefaultInstance());
+			 worldIn.setBlockState(pos, state.with(ACTIVE_PORT, Boolean.valueOf(false)));
+			 return ActionResultType.SUCCESS;
+		 }
+		 else if (player.inventory.getCurrentItem().getItem() == ForgeRegistries.ITEMS.getValue(new ResourceLocation("ancientguardian:ancient_crystal")))
+		 {
 			 worldIn.setBlockState(pos, state.with(ACTIVE_PORT, Boolean.valueOf(true)));
 			 player.inventory.getCurrentItem().setCount(player.inventory.getCurrentItem().getCount() - 1);
 			 return ActionResultType.SUCCESS;
