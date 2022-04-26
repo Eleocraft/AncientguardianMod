@@ -1,0 +1,9 @@
+{
+	"parent": "block/cube_bottom_top",
+	"textures":
+	{
+		"bottom": "ancientguardian:block/ancient_pillar_top",
+		"top": "ancientguardian:block/ancient_pillar_top",
+		"side": "ancientguardian:block/ancient_pillar_side"
+	}
+}

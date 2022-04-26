@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=east":  { "model": "ancientguardian:block/ancient_corner_block" },
+        "facing=west":  { "model": "ancientguardian:block/ancient_corner_block", "y": 180},
+        "facing=south": { "model": "ancientguardian:block/ancient_corner_block", "y": 90},
+        "facing=north": { "model": "ancientguardian:block/ancient_corner_block", "y": 270}
+	}
+}

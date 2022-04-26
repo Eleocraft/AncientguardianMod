@@ -1,0 +1,7 @@
+{
+	"variants":
+	{
+        "active_port=false": { "model": "ancientguardian:block/ancient_base"},
+        "active_port=true": { "model": "ancientguardian:block/ancient_base_active"}
+	}
+}

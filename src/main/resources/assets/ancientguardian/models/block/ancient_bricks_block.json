@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_all",
+	"textures":
+	{
+		"all": "ancientguardian:block/ancient_bricks_block"
+	}
+}
